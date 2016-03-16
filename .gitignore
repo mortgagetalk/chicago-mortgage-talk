@@ -78,6 +78,7 @@ wp-content/themes/twentytwelve/
 wp-content/themes/twentythirteen/
 wp-content/themes/twentyfourteen/
 wp-content/themes/twentyfifteen/
+wp-content/themes/twentysixteen/
 
 # ignore node/grunt dependency directories
 node_modules/
