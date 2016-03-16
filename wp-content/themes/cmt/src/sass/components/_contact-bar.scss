@@ -1,0 +1,24 @@
+
+.contact-bar {
+  background: $lt-grey;
+  text-align: center;
+}
+
+.contact-bar h4 {
+  @include font-size(24px);
+  @include line-height(30px);
+  display: inline-block;
+  color: $dk-grey;
+  font-weight: $font-weight-bold;
+
+  @include bp-max-width($large) {
+    margin-bottom: $base;
+  }
+}
+
+.contact-bar p {
+  @include bp-min-width($large) {
+    display: inline-block;
+    margin-left: 40px;
+  }
+}

@@ -1,0 +1,81 @@
+body {
+  background: $lt-grey;
+}
+
+.site-wrapper {
+  @include bp-min-width($medium) {
+    @include cf;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+
+.main {
+  background: #fff;
+  margin: 0 10px;
+  padding: 0 20px;
+  max-width: 1288px;
+
+  @include bp-min-width($large) {
+    padding: 0 40px;
+    margin: -72px auto 0;
+  }
+}
+
+.wrapper {
+  @include cf;
+  margin: 0 auto;
+  padding: $base 20px;
+
+  @include bp-min-width($medium) {
+    max-width: 1288px;
+    padding: $base*2 40px;
+  }
+}
+
+.main-wrapper {
+  @include cf;
+  margin: 0 auto;
+  padding: $base 0;
+
+  @include bp-min-width($large) {
+    padding: 36px 0;
+  }
+}
+
+.content-wrapper {
+  position: relative;
+}
+
+.page-content {
+  width: 100%;
+  padding-right: 310px;
+}
+
+.sidebar-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 276px;
+}
+
+.no-scroll {
+  position: fixed;
+  overflow: hidden;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.is-visible {
+  display: block;
+}
+
+.mobile-visible {
+  visibility: visible;
+}
+
+.mobile-hidden {
+  visibility: hidden;
+}

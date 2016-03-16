@@ -1,0 +1,21 @@
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+[class^="icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-search {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}
+
+.icon-close {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}

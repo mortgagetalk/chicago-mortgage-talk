@@ -1,0 +1,32 @@
+
+.section-title-bar {
+  position: relative;
+  margin-bottom: $base;
+  text-align: center;
+}
+
+.section-title-bar:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+  height: 1px;
+  background: $grey;
+}
+
+.section-title {
+  @include font-size(18px);
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  background: #fff;
+  padding: 0 16px;
+  color: $red;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  text-align: center;
+}

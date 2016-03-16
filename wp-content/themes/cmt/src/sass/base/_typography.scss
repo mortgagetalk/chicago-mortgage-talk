@@ -1,0 +1,111 @@
+
+$font-sans:  'freight-sans-pro', Helvetica, arial, sans-serif;
+$font-serif: 'freight-text-pro', Georgia, serif;
+
+$font-weight-regular: 400;
+$font-weight-medium:  500;
+$font-weight-bold:    700;
+
+$base:  24px;
+
+/*
+h1: 46px
+h2: 32px
+h3: 24px
+
+subtitle: 30px
+
+p: 18px
+meta: 17px
+*/
+
+body {
+  font: $font-weight-regular 1em/1.5em $font-sans;
+  color: $dk-grey;
+}
+
+h1,h2,h3,h4,h5 {
+  line-height: 1;
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4, h5 {
+  @include font-size(17px);
+}
+
+strong {
+  font-weight: $font-weight-bold;
+}
+
+em {
+  font-style: italic;
+}
+
+blockquote {
+  margin-bottom: 2em;
+  padding-left: 30px;
+  border-left: 6px solid $lt-blue;
+}
+
+.label {
+  font-weight: $font-weight-bold;
+}
+
+.body-content p,
+.body-content ul,
+.body-content ol {
+  @include font-size(18px);
+  margin-bottom: 1.5em;
+  font-family: $font-serif;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.body-content ul,
+.body-content ol {
+  margin-left: 1.5em;
+}
+
+.body-content ul li {
+  list-style: disc;
+}
+
+.body-content ol li {
+  list-style: decimal;
+}
+
+.body-content h2 {
+  @include font-size(24px);
+  margin-bottom: 4px;
+  color: $blue;
+  font-weight: $font-weight-bold;
+
+  @include bp-min-width($medium) {
+    @include font-size(32px);
+  }
+}
+
+.body-content h3,
+.body-content h4 {
+  @include font-size(17px);
+  color: $blue;
+  font-weight: $font-weight-bold;
+
+  @include bp-min-width($medium) {
+    @include font-size(24px);
+  }
+}
+
+.body-content h3 {
+  margin-bottom: 4px;
+}

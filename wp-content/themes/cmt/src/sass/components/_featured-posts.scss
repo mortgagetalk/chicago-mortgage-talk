@@ -1,0 +1,18 @@
+
+.featured-posts {
+  background: $lt-grey;
+  
+  h2 {
+    text-align: center;
+    margin-bottom: $base*2;
+  }
+}
+
+.featured-posts .more-news {
+  padding-top: $base;
+  text-align: center;
+
+  @include bp-min-width($large) {
+    padding-top: $base*2;
+  }
+}

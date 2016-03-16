@@ -1,0 +1,17 @@
+
+.widget--title {
+  @include font-size(24px);
+  margin-bottom: 12px;
+  font-weight: $font-weight-bold;
+}
+
+.widget--content:not(:last-child) {
+  margin-bottom: $base;
+}
+
+.widget--content p {
+  @include font-size(15px);
+  @include line-height(20px);
+  font-family: $font-serif;
+}
+

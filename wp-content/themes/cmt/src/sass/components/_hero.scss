@@ -1,0 +1,70 @@
+
+.hero {
+  background-color: #000;
+}
+
+.hero-wrapper {
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 36px 20px;
+  background-color: #000;
+
+  @include bp-min-width($large) {
+    padding: $base*4 40px $base*7;
+  }
+}
+
+.hero-title,
+.hero-subtitle,
+.hero-content {
+  color: #fff;
+
+  &:first-child {
+    margin-bottom: $base;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.hero-title {
+  @include col-span(8, max-width);
+  @include font-size(24px);
+  margin-bottom: 12px;
+  color: #fff;
+  font-weight: $font-weight-bold;
+
+  @include bp-min-width($xsmall) {
+    @include font-size(30px);
+    margin-bottom: $base;
+    line-height: 1;
+  }
+
+  @include bp-min-width($large) {
+    @include font-size(46px);
+  }
+}
+
+.hero-subtitle {
+  @include font-size(21px);
+  font-family: $font-serif;
+
+  @include bp-max-width($xsmall) {
+    @include line-height(24px);
+  }
+
+  @include bp-min-width($xsmall) {
+    @include font-size(24px);
+  }
+
+  @include bp-min-width($large) {
+    @include font-size(30px);
+  }
+}
+
+.hero-body {
+  @include font-size(18px);
+  font-family: $font-serif;
+  @include col-span(8, max-width);
+}

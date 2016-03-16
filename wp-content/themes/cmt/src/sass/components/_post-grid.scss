@@ -1,0 +1,44 @@
+
+.post-grid {
+  @include cf;
+}
+
+.post-grid--item {
+  position: relative;
+}
+
+.post-grid--link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background: rgba(#000, 0.5);
+  color: #fff;
+}
+
+.post-grid--link:hover {
+  background: rgba(#000, 0.3);
+  color: #fff;
+}
+
+.post-grid--info {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+}
+
+.post-grid--title {
+  @include font-size(24px);
+  margin-bottom: 6px;
+  font-weight: $font-weight-bold;
+}
+
+.post-grid--meta {
+  @include font-size(17px);
+  font-weight: $font-weight-medium;
+}
+
+

@@ -1,0 +1,51 @@
+
+.site-footer {
+  position: relative;
+  color: $blue;
+  background-color: #fff;
+}
+
+.footer--title {
+  @include font-size(24px);
+  margin-bottom: 16px;
+  font-weight: $font-weight-bold;
+}
+
+.site-footer p {
+  @include font-size(17px);
+  @include line-height(24px);
+}
+
+.site-footer a {
+  color: $blue;
+
+  &:hover {
+    color: $lt-blue;
+  }
+}
+
+.footer-logo {
+  @include font-size(24px);
+  margin-bottom: 16px;
+  font-weight: $font-weight-bold;
+}
+
+.footer-social {
+  @include cf;
+}
+
+.footer-social--item {
+  float: left;
+  margin-right: 10px;
+}
+
+.footer-social--icon {
+  @include global-transition(0.1s);
+  width: 30px;
+  height: 30px;
+  fill: $blue;
+}
+
+.footer-social--icon:hover {
+  fill: $lt-blue;
+}

@@ -1,0 +1,98 @@
+
+.newsletter-section {
+  background: $red;
+  color: #fff;
+  text-align: center;
+}
+
+.newsletter-section .wrapper {
+  padding-top: 36px;
+  padding-bottom: 36px;
+
+  @include bp-min-width($medium) {
+    padding-top: 72px;
+    padding-bottom: 78px;
+  }
+}
+
+.newsletter-section--title {
+  @include font-size(24px);
+  margin-bottom: $base;
+  color: #fff;
+  font-weight: $font-weight-bold;
+
+  @include bp-min-width($medium) {
+    @include font-size(30px);
+    line-height: 1;
+  }
+
+  @include bp-min-width($large) {
+    @include font-size(36px);
+  }
+}
+
+.newsletter-section--subtitle {
+  @include font-size(21px);
+  margin-bottom: 36px;
+  font-family: $font-serif;
+
+  @include bp-min-width($medium) {
+    @include font-size(24px);
+  }
+}
+
+.newsletter-section--form {
+  @include col-span(5, max-width);
+  margin: 0 auto;
+}
+
+.newsletter-form {
+  position: relative;
+}
+
+input.newsletter-form--input {
+  background: #fff;
+  border: none;
+}
+
+input.newsletter-form--btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.newsletter-section--form input.newsletter-form--input,
+.newsletter-section--form input.newsletter-form--btn {
+  height: 54px;
+}
+
+.newsletter-section--form input.newsletter-form--input {
+  @include font-size(19px);
+  padding: 0 120px 0 20px;
+}
+
+.newsletter-section--form input.newsletter-form--btn {
+  @include font-size(19px);
+  width: 120px;
+}
+
+/** Newsletter Widget ======**/
+
+.widget-newsletter {
+  padding: 20px;
+  background: $red;
+  color: #fff;
+}
+
+.widget-newsletter--form .newsletter-form--input,
+.widget-newsletter--form .newsletter-form--btn {
+  height: 42px;
+}
+
+.widget-newsletter--form input.newsletter-form--input {
+  padding: 0 100px 0 20px;
+}
+
+.widget-newsletter--form input.newsletter-form--btn {
+  width: 100px;
+}

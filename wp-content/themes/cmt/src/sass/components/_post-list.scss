@@ -1,0 +1,40 @@
+
+.post-list--item {
+  position: relative;
+  margin-bottom: $base;
+  padding-left: 306px;
+
+  @include bp-min-width($medium) {
+    min-height: 193px;
+    margin-bottom: $base*2;
+  }
+}
+
+.post-list--thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include bp-min-width($medium) {
+    width: 276px;
+  }
+}
+
+.post-list--category {
+  @include font-size(17px);
+  margin-bottom: 4px;
+  padding-top: 4px;
+  font-weight: $font-weight-medium;
+}
+
+.post-list--title {
+  @include font-size(32px);
+  margin-bottom: 6px;
+  font-weight: $font-weight-bold;
+}
+
+.post-list--meta {
+  @include font-size(19px);
+  font-weight: $font-weight-medium;
+}
+
