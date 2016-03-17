@@ -2,7 +2,7 @@
 
 <section class="hero">
   <div class="hero-wrapper">
-    <h2 class="hero-title"><?php the_title(); ?></h2>
+    <h2 class="hero--title"><?php the_title(); ?></h2>
   </div>
 </section>
 

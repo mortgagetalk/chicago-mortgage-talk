@@ -9,7 +9,7 @@
   	<title><?php wp_title( '|', true, 'right' ); ?></title>
   	<meta name="title" content="<?php wp_title( '|', true, 'right' ); ?>">
   	<meta name="description" content="<?php bloginfo('description'); ?>" />
-  	<link rel="icon" type="image/png" href="/favicon.png">
+  	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/dist/images/favicon.png">
   	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
     <script src="https://use.typekit.net/ksi3xzc.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -34,7 +34,7 @@
               <span class="btn-mobile--bar"></span>
             </span>
           </a>
-          <a href="" class="main-nav--close-menu is-hidden">
+          <a href="" class="main-nav--close-menu">
             <svg class="icon-close">
               <use xlink:href="#icon-close"></use>
             </svg>

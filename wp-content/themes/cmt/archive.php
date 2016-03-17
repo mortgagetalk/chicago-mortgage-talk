@@ -6,65 +6,55 @@
 
     <section class="hero">
       <div class="hero-wrapper">
-    	<?php if (is_category()) { ?>
-    		<h1 class="hero-title"><?php single_cat_title(); ?></h1>
-
-    	<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-    		<h1 class="hero-title"><?php _e('Posts Tagged','html5reset'); ?> &#8216;<?php single_tag_title(); ?>&#8217;</h1>
-
-    	<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-    		<h1 class="hero-title"><?php _e('Archive for','html5reset'); ?> <?php the_time('F jS, Y'); ?></h1>
-
-    	<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-    		<h1 class="hero-title"><?php _e('Archive for','html5reset'); ?> <?php the_time('F, Y'); ?></h1>
-
-    	<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-    		<h1 class="hero-title"><?php _e('Archive for','html5reset'); ?> <?php the_time('Y'); ?></h1>
-
-    	<?php /* If this is an author archive */ } elseif (is_author()) { ?>
-    		<h1 class="hero-title"><?php _e('Author Archive','html5reset'); ?></h1>
-
-    	<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-    		<h1 class="hero-title"><?php _e('Blog Archives','html5reset'); ?></h1>
-
-    	<?php } ?>
+    	<?php
+        the_archive_title( '<h1 class="hero--title">', '</h1>' );
+        the_archive_description( '<div class="hero--description">', '</div>' );
+      ?>
       </div>
     </section>
 
-    <section class="main">
+    <main class="main" role="main">
       <div class="main-wrapper">
 
-			<?php while (have_posts()) : the_post(); ?>
+        <div class="content-wrapper">
 
-    		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+          <section class="page-content">
+            <?php get_template_part('partials/post-list'); ?>
+          </section>
 
-          <p class="post--meta">By <?php the_author(); ?> | <?php the_date('M j, Y'); ?></p>
-    			<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-    			<div class="body-content">
-    				<?php the_content(); ?>
-    			</div>
+          <?php get_sidebar(); ?>
 
-    		</article>
-
-			<?php endwhile; ?>
-
-			<?php post_navigation(); ?>
+        </div>
 
     	</div>
-  	</section>
+  	</main>
 
   <?php else : ?>
 
-    <h1 class="page-title">Whoops!</h1>
+    <section class="hero">
+      <div class="hero-wrapper">
+        <h1 class="hero--title">Whoops!</h1>
+      </div>
+    </section>
 
-    <section class="main main-no-posts">
+    <main class="main" role="main">
       <div class="main-wrapper">
-        <div class="body">
-          <h3><?php _e('No posts, yet.','html5reset'); ?></h3>
-          <p><a href="/news/" class="btn">Back to News</a></p>
+
+        <div class="content-wrapper">
+
+          <section class="page-content">
+            <div class="body-content">
+              <h3><?php _e('No posts, yet.','html5reset'); ?></h3>
+              <p><a href="/" class="btn">Back home you go!</a></p>
+            </div>
+          </section>
+
+          <?php get_sidebar(); ?>
+
         </div>
-    	</div>
-  	</section>
+
+      </div>
+    </main>
 
   <?php endif; ?>
 

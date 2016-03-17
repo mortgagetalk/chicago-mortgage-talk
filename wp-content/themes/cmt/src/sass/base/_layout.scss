@@ -48,15 +48,24 @@ body {
 }
 
 .page-content {
-  width: 100%;
-  padding-right: 310px;
+
+  @include bp-min-width($large) {
+    width: 100%;
+    padding-right: 310px;
+  }
 }
 
 .sidebar-right {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 276px;
+  @include bp-max-width($large) {
+    display: none;
+  }
+
+  @include bp-min-width($large) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 276px;
+  }
 }
 
 .no-scroll {

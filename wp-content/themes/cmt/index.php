@@ -2,12 +2,12 @@
 
 <section class="hero home-hero">
   <div class="hero-wrapper">
-    <h1 class="home-hero-title hero-title">Chicago Mortgage Talk</h1>
-    <h2 class="hero-subtitle">Exploring Chicagoland’s home loans market</h2>
+    <h1 class="home-hero--title hero--title">Chicago Mortgage Talk</h1>
+    <h2 class="hero--subtitle">Exploring Chicagoland’s home loans market</h2>
   </div>
 </section>
 
-<section class="main">
+<main class="main" role="main">
   <div class="main-wrapper">
 
     <section class="mortgage-101">
@@ -24,7 +24,7 @@
             <a href="<?php the_permalink(); ?>" class="post-grid--link">
               <div class="post-grid--info">
                 <h3 class="post-grid--title"><?php the_title(); ?></h3>
-                <p class="post-grid--meta">By <?php the_author(); ?> | <?php the_date('M j, Y'); ?></p>
+                <p class="post-grid--meta">By <?php the_author(); ?> | <?php the_time('F j, Y'); ?></p>
               </div>
             </a>
           </article>
@@ -34,7 +34,7 @@
     </section>
 
     <div class="section-title-bar">
-      <h2 class="section-title">latest-posts</h2>
+      <h2 class="section-title">Latest Posts</h2>
     </div>
 
     <div class="content-wrapper">
@@ -50,7 +50,7 @@
               <div class="post-list--info">
                 <p class="post-list--category"><?php the_category( ' ' ); ?></p>
                 <h3 class="post-list--title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                <p class="post-list--meta">By <?php the_author(); ?> | <?php the_date('M j, Y'); ?></p>
+                <p class="post-list--meta">By <?php the_author(); ?> | <?php the_time('F j, Y'); ?></p>
               </div>
             </a>
           </article>
@@ -61,23 +61,12 @@
         </div>
       </section>
 
-      <aside class="sidebar-right">
-        <div class="widget widget-newsletter">
-          <h4 class="widget--title">Stay Up to Date</h4>
-          <div class="widget--content">
-            <p>Sign up to stay up to date on the latest Chicago mortgage news.</p>
-          </div>
-          <form class="widget-newsletter--form newsletter-form">
-            <input type="email" placeholder="Email" class="newsletter-form--input">
-            <input type="submit" value="Sign Up" class="btn btn__dk-red newsletter-form--btn">
-          </form>
-        </div>
-      </aside>
+      <?php get_sidebar(); ?>
 
     </div>
 
   </div>
-</section>
+</main>
 
 <?php post_navigation(); ?>
 

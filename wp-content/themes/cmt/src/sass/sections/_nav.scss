@@ -2,7 +2,7 @@
 .main-nav {
   @include cf;
 
-  @include bp-min-width($medium) {
+  @include bp-min-width($small) {
     margin-left: auto;
   }
 

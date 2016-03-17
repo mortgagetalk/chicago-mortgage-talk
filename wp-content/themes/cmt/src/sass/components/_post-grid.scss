@@ -1,6 +1,11 @@
 
 .post-grid {
   @include cf;
+  margin: 0 -18px;
+}
+
+.post-grid .col-1-3 {
+  padding: 0 18px;
 }
 
 .post-grid--item {

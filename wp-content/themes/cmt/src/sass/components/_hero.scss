@@ -14,9 +14,9 @@
   }
 }
 
-.hero-title,
-.hero-subtitle,
-.hero-content {
+.hero--title,
+.hero--subtitle,
+.hero--content {
   color: #fff;
 
   &:first-child {
@@ -28,7 +28,7 @@
   }
 }
 
-.hero-title {
+.hero--title {
   @include col-span(8, max-width);
   @include font-size(24px);
   margin-bottom: 12px;
@@ -46,7 +46,7 @@
   }
 }
 
-.hero-subtitle {
+.hero--subtitle {
   @include font-size(21px);
   font-family: $font-serif;
 
@@ -63,8 +63,12 @@
   }
 }
 
-.hero-body {
+.hero--description {
+  @include col-span(8, max-width);
+}
+
+.hero--description p {
   @include font-size(18px);
   font-family: $font-serif;
-  @include col-span(8, max-width);
+  color: #fff;
 }
