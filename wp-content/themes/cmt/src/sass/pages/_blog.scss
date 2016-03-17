@@ -1,4 +1,12 @@
 
+.post--content {
+  @include bp-min-width($large) {
+    width: 100%;
+    padding-left: 102px;
+    padding-right: 310px;
+  }
+}
+
 .post--meta {
   @include font-size(18px);
   margin-bottom: 6px;
@@ -34,58 +42,55 @@
   }
 }
 
-.post--content {
-  @include cf;
-
-  @include bp-min-width($small) {
-    position: relative;
-    padding-right: 162px;
-  }
-}
-
 .post--share {
   @include cf;
   margin-bottom: $base;
-  border-top: 1px solid $lt-grey;
-  border-bottom: 1px solid $lt-grey;
+  text-align: center;
 
   @include bp-min-width($small) {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 122px;
+    left: 0;
+    width: 68px;
+    padding-top: $base;
+    padding-bottom: $base;
+    background: $blue;
   }
 }
 
-.post--share a {
-  display: block;
-  padding: 12px 0;
-  color: $dk-grey;
+.post--share-link {
+  display: inline-block;
+  width: 100%;
+}
 
-  @include bp-max-width($small+1) {
-    float: left;
-    margin-right: 10px;
-  }
-
-  @include bp-min-width($small) {
-    border-bottom: 1px solid $lt-grey;
-  }
-
-  &:hover {
-    color: $green;
-  }
-
-  &:hover svg {
-    fill: $green;
-  }
+.post--share-link:not(:last-child) {
+  margin-bottom: 12px;
 }
 
 .post--share-icon {
   display: inline-block;
   vertical-align: middle;
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
-  fill: $dk-grey;
+  fill: #fff;
 }
+
+.post--share .icon-facebook {
+  width: 10px;
+  height: 20px;
+}
+
+.post--share .icon-twitter {
+  width: 20px;
+  height: 16px;
+}
+
+.post--share .icon-linkedin {
+  width: 20px;
+  height: 20px;
+}
+
+.post--share .icon-email {
+  width: 20px;
+  height: 15px;
+}
+
 

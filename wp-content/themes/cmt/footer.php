@@ -25,29 +25,29 @@
               <ul>
                 <li class="footer-social--item">
                   <a href="" target="_blank">
-                    <svg class="footer-social--icon icon-facebook">
-                      <use xlink:href="#icon-facebook"></use>
+                    <svg class="footer-social--icon icon-circle-facebook">
+                      <use xlink:href="#icon-circle-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="footer-social--item">
                   <a href="" target="_blank">
-                    <svg class="footer-social--icon icon-twitter">
-                      <use xlink:href="#icon-twitter"></use>
+                    <svg class="footer-social--icon icon-circle-twitter">
+                      <use xlink:href="#icon-circle-twitter"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="footer-social--item">
                   <a href="" target="_blank">
-                    <svg class="footer-social--icon icon-linkedin">
-                      <use xlink:href="#icon-linkedin"></use>
+                    <svg class="footer-social--icon icon-circle-linkedin">
+                      <use xlink:href="#icon-circle-linkedin"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="footer-social--item">
                   <a href="" target="_blank">
-                    <svg class="footer-social--icon icon-google-plus">
-                      <use xlink:href="#icon-google-plus"></use>
+                    <svg class="footer-social--icon icon-circle-google-plus">
+                      <use xlink:href="#icon-circle-google-plus"></use>
                     </svg>
                   </a>
                 </li>
