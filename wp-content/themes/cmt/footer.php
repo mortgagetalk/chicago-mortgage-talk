@@ -14,13 +14,13 @@
 
           <div class="footer-grid grid">
 
-            <div class="col-1-4 footer-address">
+            <div class="col col-1-4__lg col-1-2__md footer-address">
               <h3 class="footer-logo"><a href="/"><span class="logo--link__mortgage">Mortgage</span><span class="logo--link__talk">Talk</span></a></h3>
               <p>&copy;<?php echo date('Y'); ?>. All Rights Reserved.</p>
               <p><a href="http://bradsawicki.com" target="_blank">Site by: Brad Sawicki</a></p>
             </div>
 
-            <div class="col-1-4 footer-social">
+            <div class="col col-1-4__lg col-1-2__md footer-social">
               <h3 class="footer--title">Follow Us</h3>
               <ul>
                 <li class="footer-social--item">
@@ -54,7 +54,7 @@
               </ul>
             </div>
 
-            <div class="col-1-4 footer-contact">
+            <div class="col col-1-4__lg col-1-2__md footer-contact">
               <h3 class="footer--title">Contact Us</h3>
               <p>United Home Loans<br>
               Chicago, IL<br>
@@ -62,7 +62,7 @@
               866-607-1780 | <a href="mailto:">Email Us</a></p>
             </div>
 
-            <div class="col-1-4 footer-quick-links">
+            <div class="col col-1-4__lg col-1-2__md footer-quick-links">
               <h3 class="footer--title">Quicklinks</h3>
               <ul>
                 <li><a href="">Current Mortgage Rates</a></li>

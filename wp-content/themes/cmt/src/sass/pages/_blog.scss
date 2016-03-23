@@ -1,8 +1,11 @@
 
 .post--content {
+  @include bp-min-width($small) {
+    padding-left: 102px;
+  }
+
   @include bp-min-width($large) {
     width: 100%;
-    padding-left: 102px;
     padding-right: 310px;
   }
 }
@@ -20,6 +23,7 @@
 
   @include bp-min-width($large) {
     @include font-size(46px);
+    @include line-height(48px)
   }
 }
 
@@ -44,8 +48,15 @@
 
 .post--share {
   @include cf;
-  margin-bottom: $base;
+  float: right;
+  width: 40px;
+  margin-left: 12px;
+  margin-bottom: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background: $blue;
   text-align: center;
+
 
   @include bp-min-width($small) {
     position: absolute;
@@ -54,12 +65,11 @@
     width: 68px;
     padding-top: $base;
     padding-bottom: $base;
-    background: $blue;
   }
 }
 
 .post--share-link {
-  display: inline-block;
+  display: block;
   width: 100%;
 }
 

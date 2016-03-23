@@ -24,7 +24,6 @@ $tiny:    400px;
 }
 
 @mixin bp-min-height($point) {
-  $emPoint: $point / 16px;
 	@media (min-width: calculateEm($point)) { @content; }
 }
 

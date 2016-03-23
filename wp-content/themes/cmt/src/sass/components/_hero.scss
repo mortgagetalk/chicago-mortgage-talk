@@ -43,6 +43,7 @@
 
   @include bp-min-width($large) {
     @include font-size(46px);
+    @include line-height(48px)
   }
 }
 
@@ -70,5 +71,15 @@
 .hero--description p {
   @include font-size(18px);
   font-family: $font-serif;
+  color: #fff;
+}
+
+.hero--post-category {
+  @include font-size(17px);
+  color: #fff;
+  font-weight: $font-weight-medium;
+}
+
+.hero--post-category a {
   color: #fff;
 }

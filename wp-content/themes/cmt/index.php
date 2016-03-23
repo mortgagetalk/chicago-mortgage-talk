@@ -14,11 +14,11 @@
       <div class="section-title-bar">
         <h2 class="section-title">Mortgage 101</h2>
       </div>
-      <div class="post-grid row">
+      <div class="post-grid grid__md">
       <?php $my_query = new WP_Query( 'category_name=mortgage-101&posts_per_page=3' );
       while ( $my_query->have_posts() ) : $my_query->the_post();
       $do_not_duplicate[] = $post->ID; ?>
-        <div class="col-1-3">
+        <div class="col col-1-3__md col-1-3__lg">
           <article class="post-grid--item">
             <?php the_post_thumbnail('grid-thumb'); ?>
             <a href="<?php the_permalink(); ?>" class="post-grid--link">

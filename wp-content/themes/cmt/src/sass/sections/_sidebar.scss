@@ -1,4 +1,8 @@
 
+.widget:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .widget--title {
   @include font-size(24px);
   margin-bottom: 12px;
@@ -14,4 +18,43 @@
   @include line-height(20px);
   font-family: $font-serif;
 }
+
+.widget-author {
+  padding: 18px;
+  background: $lt-grey;
+}
+
+.widget-author--header {
+  position: relative;
+  height: 100px;
+  margin-bottom: 12px;
+  padding-top: 12px;
+  padding-left: 118px;
+}
+
+.widget-author--headshot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+}
+
+.widget-author--name {
+  @include font-size(22px);
+  margin-bottom: 6px;
+  font-weight: $font-weight-bold;
+}
+
+.widget-author--job-title {
+  @include font-size(17px);
+  @include line-height(18px);
+}
+
+.widget-mortgage-101 li {
+  @include font-size(17px);
+  @include line-height(20px);
+  margin-bottom: 16px;
+  font-weight: $font-weight-bold;
+}
+
 

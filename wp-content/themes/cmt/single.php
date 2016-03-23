@@ -2,6 +2,7 @@
 
 <section class="hero">
   <div class="hero-wrapper">
+    <p class="hero--post-category"><?php the_category( ' / ' ); ?></p>
     <h2 class="hero--title"><?php the_title(); ?></h2>
   </div>
 </section>

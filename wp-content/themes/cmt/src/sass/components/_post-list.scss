@@ -2,11 +2,12 @@
 .post-list--item {
   position: relative;
   margin-bottom: $base;
-  padding-left: 306px;
+  padding-left: 158px;
 
   @include bp-min-width($medium) {
     min-height: 193px;
     margin-bottom: $base*2;
+    padding-left: 306px;
   }
 }
 
@@ -14,6 +15,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: 140px;
 
   @include bp-min-width($medium) {
     width: 276px;
@@ -21,20 +23,32 @@
 }
 
 .post-list--category {
-  @include font-size(17px);
+  @include font-size(15px);
   margin-bottom: 4px;
-  padding-top: 4px;
   font-weight: $font-weight-medium;
+
+  @include bp-min-width($medium) {
+    @include font-size(17px);
+    padding-top: 4px;
+  }
 }
 
 .post-list--title {
-  @include font-size(32px);
+  @include font-size(24px);
   margin-bottom: 6px;
   font-weight: $font-weight-bold;
+
+  @include bp-min-width($medium) {
+    @include font-size(32px);
+  }
 }
 
 .post-list--meta {
-  @include font-size(19px);
+  @include font-size(15px);
   font-weight: $font-weight-medium;
+
+  @include bp-min-width($medium) {
+    @include font-size(19px);
+  }
 }
 

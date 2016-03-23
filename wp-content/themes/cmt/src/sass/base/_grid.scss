@@ -1,51 +1,56 @@
-$pad: 20px;
+$pad: 18px;
 
 .grid {
   @include cf;
-  margin-bottom: -24px;
-  
-  @include bp-min-width($large) {
-    margin: 0 -20px -24px;
+}
+
+.col {
+  width: 100%;
+}
+
+.grid__md {
+  @include bp-min-width($medium) {
+    margin: 0 -18px;
   }
 }
 
-[class*='col-'] {
-  width: 100%;
+.grid__md .col {
+  margin-bottom: $base;
 
-  @include bp-max-width($large) {
-    margin-bottom: $base*1.5;
-    
-    &:last-of-type {
-      margin-bottom: 0;
-    }
+  @include bp-min-width($medium) {
+    margin-bottom: 0;
   }
-  
+}
+
+.grid__md .col:last-of-type {
+  @include bp-max-width($medium) {
+    margin-bottom: 0;
+  }
+}
+
+/** Large Screens ======**/
+
+.col-3-4__lg {
   @include bp-min-width($large) {
     float: left;
-  }
-}
-
-.grid [class*='col-'] {
-  @include bp-min-width($large) {
+    width: 75%;
     padding: 0 $pad;
   }
 }
 
-.col-3-4 {
+.col-2-3__lg {
   @include bp-min-width($large) {
-    width: 75%;
-  }
-}
-
-.col-2-3 {
-  @include bp-min-width($large) {
+    float: left;
     width: 66.66%;
+    padding: 0 $pad;
   }
 }
 
-.col-1-2 {
+.col-1-2__lg {
   @include bp-min-width($large) {
+    float: left;
     width: 50%;
+    padding: 0 $pad;
 
     &:nth-child(2n+1) {
       clear: left;
@@ -53,23 +58,57 @@ $pad: 20px;
   }
 }
 
-.col-1-3 {
+.col-1-3__lg {
   @include bp-min-width($large) {
+    float: left;
     width: 33.33%;
-    
+    padding: 0 $pad;
+
     &:nth-child(3n+1) {
       clear: left;
     }
   }
 }
 
-.col-1-4 {
-  @include bp-min-width($medium) {
-    width: 50%;
-    margin-bottom: $base*1.5;
-  }
-
+.col-1-4__lg {
   @include bp-min-width($large) {
+    float: left;
     width: 25%;
+    padding: 0 $pad;
+  }
+}
+
+
+/** Medium Screens ======**/
+
+.col-1-2__md {
+  @include bp-min-max($medium, $large) {
+    float: left;
+    width: 50%;
+    padding: 0 $pad;
+
+    &:nth-child(2n+1) {
+      clear: left;
+    }
+  }
+}
+
+.col-1-3__md {
+  @include bp-min-width($medium) {
+    float: left;
+    width: 33.33%;
+    padding: 0 $pad;
+
+    &:nth-child(3n+1) {
+      clear: left;
+    }
+  }
+}
+
+.col-1-4__md {
+  @include bp-min-width($medium) {
+    float: left;
+    width: 50%;
+    padding: 0 $pad;
   }
 }
