@@ -7,8 +7,12 @@
 
 .footer--title {
   @include font-size(24px);
-  margin-bottom: 16px;
+  margin-bottom: 6px;
   font-weight: $font-weight-bold;
+
+  @include bp-min-width($small) {
+    margin-bottom: 16px;
+  }
 }
 
 .site-footer p {
@@ -24,10 +28,21 @@
   }
 }
 
+.footer-grid .col {
+  @include bp-max-width($small) {
+    margin-bottom: $base;
+  }
+}
+
 .footer-logo {
   @include font-size(24px);
-  margin-bottom: 16px;
+  margin-bottom: 6px;
   font-weight: $font-weight-bold;
+
+
+  @include bp-min-width($small) {
+    margin-bottom: 16px;
+  }
 }
 
 .footer-social {
