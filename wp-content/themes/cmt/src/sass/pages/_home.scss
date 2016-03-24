@@ -14,5 +14,9 @@
 }
 
 .mortgage-101 {
-  margin-bottom: $base*2;
+  margin-bottom: $base;
+
+  @include bp-min-width($medium) {
+    margin-bottom: $base*2;
+  }
 }

@@ -3,9 +3,23 @@
   @include cf;
 }
 
+.post-grid .col {
+  @include bp-min-max($medium, $large) {
+    margin-bottom: $base;
+  }
+}
+
+.post-grid .col:last-child {
+  @include bp-min-max($medium, $large) {
+    float: none;
+    margin: 0 auto;
+  }
+}
+
 .post-grid--item {
   position: relative;
 }
+
 
 .post-grid--link {
   position: absolute;
@@ -31,14 +45,26 @@
 }
 
 .post-grid--title {
-  @include font-size(24px);
+  @include font-size(19px);
   margin-bottom: 6px;
   font-weight: $font-weight-bold;
+
+  @include bp-min-max($small, $medium) {
+    @include font-size(24px);
+  }
+
+  @include bp-min-width($medium) {
+    @include font-size(24px);
+  }
 }
 
 .post-grid--meta {
-  @include font-size(17px);
+  @include font-size(15px);
   font-weight: $font-weight-medium;
+
+  @include bp-min-width($medium) {
+    @include font-size(17px);
+  }
 }
 
 

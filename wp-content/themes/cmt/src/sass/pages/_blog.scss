@@ -11,9 +11,13 @@
 }
 
 .post--meta {
-  @include font-size(18px);
-  margin-bottom: 6px;
+  @include font-size(15px);
   font-weight: $font-weight-medium;
+
+  @include bp-min-width($large) {
+    @include font-size(18px);
+    margin-bottom: 6px;
+  }
 }
 
 .post--title {

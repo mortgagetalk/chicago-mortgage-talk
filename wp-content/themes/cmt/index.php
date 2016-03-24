@@ -18,7 +18,7 @@
       <?php $my_query = new WP_Query( 'category_name=mortgage-101&posts_per_page=3' );
       while ( $my_query->have_posts() ) : $my_query->the_post();
       $do_not_duplicate[] = $post->ID; ?>
-        <div class="col col-1-3__md col-1-3__lg">
+        <div class="col col-1-2__md col-1-3__lg">
           <article class="post-grid--item">
             <?php the_post_thumbnail('grid-thumb'); ?>
             <a href="<?php the_permalink(); ?>" class="post-grid--link">

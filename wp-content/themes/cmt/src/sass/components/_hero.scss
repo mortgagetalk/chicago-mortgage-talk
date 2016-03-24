@@ -18,14 +18,6 @@
 .hero--subtitle,
 .hero--content {
   color: #fff;
-
-  &:first-child {
-    margin-bottom: $base;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .hero--title {
@@ -48,11 +40,11 @@
 }
 
 .hero--subtitle {
-  @include font-size(21px);
+  @include font-size(18px);
   font-family: $font-serif;
 
   @include bp-max-width($xsmall) {
-    @include line-height(24px);
+    @include line-height(20px);
   }
 
   @include bp-min-width($xsmall) {
