@@ -18,7 +18,13 @@ body {
 
   @include bp-min-width($large) {
     padding: 0 40px;
-    margin: -72px auto 0;
+    margin: 30px auto 0;
+  }
+}
+
+.main.negative-top-margin {
+  @include bp-min-width($large) {
+    margin-top: -72px;
   }
 }
 
@@ -45,6 +51,10 @@ body {
 
 .content-wrapper {
   position: relative;
+
+  @include bp-min-width($large) {
+    min-height: $base*34;
+  }
 }
 
 .page-content {

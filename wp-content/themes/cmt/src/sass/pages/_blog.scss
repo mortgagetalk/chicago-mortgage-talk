@@ -54,13 +54,15 @@
   @include cf;
   float: right;
   width: 40px;
-  margin-left: 12px;
   margin-bottom: 12px;
   padding-top: 6px;
   padding-bottom: 6px;
   background: $blue;
   text-align: center;
 
+  @include bp-max-width($small) {
+    margin-left: 12px;
+  }
 
   @include bp-min-width($small) {
     position: absolute;

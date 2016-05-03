@@ -8,9 +8,16 @@
       <h4 class="widget-author--name">Jeff Dulla</h4>
       <p class="widget-author--job-title">VP of United Home Loans</p>
     </div>
-    <div class="widget--content">
+    <div class="widget--content widget-author--content">
       <p>Jeff Dulla is a Senior Mortgage Banker with United Home Loans. In his five and half years there, Jeff has accumulated a client portfolio of approximately 500 closed loans totaling 131,000,000 in volume.</p>
-      <p class="widget-author--contact-link"><a href="">Contact Jeff</a></p>
+      <p class="widget-author--contact-link">
+        <a href="">
+          <svg class="icon-email widget-author--email-icon">
+            <use xlink:href="#icon-email"></use>
+          </svg>
+          <span class="widget-author--contact-name">Contact Jeff</span>
+        </a>
+      </p>
     </div>
   </div>
 

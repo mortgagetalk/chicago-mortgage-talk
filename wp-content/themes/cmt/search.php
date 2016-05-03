@@ -1,43 +1,51 @@
-<?php
-/**
- * @package WordPress
- * @subpackage HTML5-Reset-WordPress-Theme
- * @since HTML5 Reset 2.0
- */
- get_header(); ?>
+<?php get_header(); ?>
 
-	<?php if (have_posts()) : ?>
+<section class="hero">
+  <div class="hero-wrapper">
+    <h2 class="hero--title">Search Results</h2>
+    <p class="hero--subtitle">Results for: <span class="search-term"><?php echo wp_specialchars($s); ?></span></p>
+  </div>
+</section>
 
-		<h2><?php _e('Search Results','html5reset'); ?></h2>
+<main class="main negative-top-margin" role="main">
+  <div class="main-wrapper">
 
-		<?php post_navigation(); ?>
+    <div class="content-wrapper">
 
-		<?php while (have_posts()) : the_post(); ?>
-
-			<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-
-				<h2><?php the_title(); ?></h2>
-
-				<?php posted_on(); ?>
-
-				<div class="entry">
-
-					<?php the_excerpt(); ?>
-
+      <section class="page-content">
+				<div class="post-list">
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				  <article class="post-list--item">
+				    <a href="<?php the_permalink(); ?>" class="post-list--thumb">
+				      <?php the_post_thumbnail('post-thumb'); ?>
+				    </a>
+				      <div class="post-list--info">
+				        <p class="post-list--category"><?php the_category( ' ' ); ?></p>
+				        <h3 class="post-list--title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				        <p class="post-list--meta">By <?php the_author(); ?> | <?php the_time('F j, Y'); ?></p>
+				      </div>
+				    </a>
+				  </article>
+				<?php endwhile; ?>
 				</div>
 
-			</article>
+				<div class="load-more-posts">
+				  <button class="btn--load-more">More Articles</button>
+				</div>
 
-		<?php endwhile; ?>
+				<?php post_navigation(); ?>
 
-		<?php post_navigation(); ?>
+				<?php else : ?>
+					<h2 class="search--no-results"><?php _e('Nothing Found','html5reset'); ?></h2>
+					<p><a href="/" class="btn btn__blue">Back Home</a></p>
+				<?php endif; ?>
+			</section>
 
-	<?php else : ?>
+			<?php get_sidebar(); ?>
 
-		<h2><?php _e('Nothing Found','html5reset'); ?></h2>
+		</div>
 
-	<?php endif; ?>
-
-<?php get_sidebar(); ?>
+	</div>
+</main>
 
 <?php get_footer(); ?>

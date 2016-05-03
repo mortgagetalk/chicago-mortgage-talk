@@ -1,80 +1,63 @@
 <?php get_header(); ?>
 
-  <?php if (have_posts()) : ?>
-  
-		<?php $post = $posts[0]; ?>
-  
-  	<?php /* If this is a category archive */ if (is_category()) { ?>
-  		<h1 class="page-title"><?php single_cat_title(); ?></h1>
-  
-  	<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-  		<h1 class="page-title"><?php _e('Posts Tagged','html5reset'); ?> &#8216;<?php single_tag_title(); ?>&#8217;</h1>
-  
-  	<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-  		<h1 class="page-title"><?php _e('Archive for','html5reset'); ?> <?php the_time('F jS, Y'); ?></h1>
-  
-  	<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-  		<h1 class="page-title"><?php _e('Archive for','html5reset'); ?> <?php the_time('F, Y'); ?></h1>
-  
-  	<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-  		<h1 class="page-title"><?php _e('Archive for','html5reset'); ?> <?php the_time('Y'); ?></h1>
-  
-  	<?php /* If this is an author archive */ } elseif (is_author()) { ?>
-  		<h1 class="page-title"><?php _e('Author Archive','html5reset'); ?></h1>
-  
-  	<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-  		<h1 class="page-title"><?php _e('Blog Archives','html5reset'); ?></h1>
-  	
-  	<?php } ?>
-			
-	  <section class="main">
-      <div class="wrapper bg-white">
-      
-      <div class="filters">
-  			<?php wp_nav_menu( array('menu'=>'13') ); ?>
+<?php if (have_posts()) : ?>
+
+	<?php $post = $posts[0]; ?>
+
+  <main class="main" role="main">
+    <div class="main-wrapper">
+
+    <div class="author-info">
+    <?php
+      $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+      ?>
+
+      <dl>
+          <dt>Website</dt>
+          <dd><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></dd>
+          <dt>Profile</dt>
+          <!-- <dd><?php echo $curauth->user_description; ?></dd> -->
+      </dl>
+
+      <p><?php the_field('author_position', 'user_' . $curauth->id); ?></p>
+      <p><?php the_field('author_bio', 'user_' . $curauth->id); ?></p>
+
+      <h2>Posts by <?php echo $curauth->nickname; ?>:</h2>
+    </div>
+
+
+      <div class="content-wrapper">
+
+        <section class="page-content">
+          <div class="post-list">
+      			<?php while (have_posts()) : the_post(); ?>
+              <article class="post-list--item">
+                <a href="<?php the_permalink(); ?>" class="post-list--thumb">
+                  <?php the_post_thumbnail('post-thumb'); ?>
+                </a>
+                  <div class="post-list--info">
+                    <p class="post-list--category"><?php the_category( ' ' ); ?></p>
+                    <h3 class="post-list--title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                    <p class="post-list--meta">By <?php the_author(); ?> | <?php the_time('F j, Y'); ?></p>
+                  </div>
+                </a>
+              </article>
+            <?php endwhile; ?>
+            </div>
+
+      			<?php post_navigation(); ?>
+
+        	</div>
+      	</section>
+
+        <?php else : ?>
+
+
+        <?php endif; ?>
+
       </div>
 
-			<?php while (have_posts()) : the_post(); ?>
-			
-    		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-   
-         <div class="post-date"><?php the_date(); ?></div>
-   
-    			<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-    
-    			<div class="body">
-    				<?php the_content(); ?>
-    			</div>
-  
-  				<div class="post-tags">
-    				<?php the_tags( __('<span class="label">Tags:</span> ','html5reset'), ', ', ''); ?>
-  				</div>
-  				
-    		</article>
+    </div>
+  </main>
 
-			<?php endwhile; ?>
-
-			<?php post_navigation(); ?>
-
-    	</div>
-  	</section>
-			
-  <?php else : ?>
-      
-    <h1 class="page-title">Whoops!</h1>
- 
-	  <section class="main main-no-posts">
-      <div class="wrapper bg-white">
-        <div class="filters">
-    			<?php wp_nav_menu( array('menu'=>'13') ); ?>
-        </div>
-        <div class="body">
-          <h3><?php _e('No posts, yet.','html5reset'); ?></h3>
-          <p><a href="/news/" class="btn">Back to News</a></p>
-        </div>
-    	</div>
-  	</section>
-
-  <?php endif; ?>
-	
 <?php get_footer(); ?>

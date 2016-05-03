@@ -7,7 +7,7 @@
   </div>
 </section>
 
-<section class="main">
+<main class="main negative-top-margin" role="main">
   <div class="main-wrapper">
 
     <div class="content-wrapper">
@@ -36,7 +36,6 @@
               </svg>
             </a>
           </div>
-    </p>
     			<div class="post--content">
             <p class="post--meta">By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?> | <?php the_date('M j, Y'); ?></a>
       			<div class="body-content">
@@ -52,7 +51,7 @@
     </div>
 
   </div>
-</section>
+</main>
 
 <?php single_post_navigation($input = 'Post'); ?>
 

@@ -6,14 +6,12 @@
 
     <section class="hero">
       <div class="hero-wrapper">
-    	<?php
-        the_archive_title( '<h1 class="hero--title">', '</h1>' );
-        the_archive_description( '<div class="hero--description">', '</div>' );
-      ?>
+      	<?php the_archive_title( '<h1 class="hero--title">', '</h1>' ); ?>
+        <?php the_archive_description( '<div class="hero--description">', '</div>' ); ?>
       </div>
     </section>
 
-    <main class="main" role="main">
+    <main class="main negative-top-margin" role="main">
       <div class="main-wrapper">
 
         <div class="content-wrapper">
@@ -37,15 +35,15 @@
       </div>
     </section>
 
-    <main class="main" role="main">
+    <main class="main negative-top-margin" role="main">
       <div class="main-wrapper">
 
         <div class="content-wrapper">
 
           <section class="page-content">
             <div class="body-content">
-              <h3><?php _e('No posts, yet.','html5reset'); ?></h3>
-              <p><a href="/" class="btn">Back home you go!</a></p>
+              <h3>No posts, yet.</h3>
+              <p><a href="/" class="btn btn__blue">Back home</a></p>
             </div>
           </section>
 

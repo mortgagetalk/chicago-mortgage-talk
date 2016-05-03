@@ -7,7 +7,7 @@
   </div>
 </section>
 
-<main class="main" role="main">
+<main class="main negative-top-margin" role="main">
   <div class="main-wrapper">
 
     <section class="mortgage-101">

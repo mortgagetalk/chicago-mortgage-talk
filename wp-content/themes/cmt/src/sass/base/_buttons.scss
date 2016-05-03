@@ -2,8 +2,8 @@
 @mixin btn {
   @include font-size(17px);
   display: inline-block;
-  height: 42px;
-  padding: 0 1em;
+  padding: 10px 24px;
+  font-family: $font-sans;
   color: #fff;
   font-weight: $font-weight-bold;
   text-align: center;
@@ -70,9 +70,15 @@ a {
 input[type="submit"],
 button {
   @include global-transition(0.1s);
-  @include btn;
+  @include font-size(17px);
+  display: inline-block;
+  height: 42px;
+  padding: 0 1em;
   border: none;
   outline: none;
-  cursor: pointer;
   font-family: $font-sans;
+  color: #fff;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  cursor: pointer;
 }
