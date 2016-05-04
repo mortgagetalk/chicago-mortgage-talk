@@ -40,11 +40,11 @@
 }
 
 .hero--subtitle {
-  @include font-size(18px);
+  @include font-size($title-sm);
   font-family: $font-serif;
 
   @include bp-max-width($xsmall) {
-    @include line-height(20px);
+    @include line-height(22px);
   }
 
   @include bp-min-width($xsmall) {
@@ -61,9 +61,16 @@
 }
 
 .hero--description p {
-  @include font-size(18px);
   font-family: $font-serif;
   color: #fff;
+
+  @include bp-max-width($small) {
+    @include line-height(22px);
+  }
+
+  @include bp-min-width($small) {
+    @include font-size(18px);
+  }
 }
 
 .hero--post-category {

@@ -49,7 +49,7 @@
 }
 
 .post-list--title {
-  @include font-size(19px);
+  @include font-size($title-sm);
   margin-bottom: 6px;
   font-weight: $font-weight-bold;
 

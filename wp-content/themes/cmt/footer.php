@@ -22,7 +22,7 @@
 
             <div class="col col-1-4__lg col-1-2__md footer-social">
               <h3 class="footer--title">Follow Us</h3>
-              <ul>
+              <ul class="footer-social--list">
                 <li class="footer-social--item">
                   <a href="" target="_blank">
                     <svg class="footer-social--icon icon-circle-facebook">

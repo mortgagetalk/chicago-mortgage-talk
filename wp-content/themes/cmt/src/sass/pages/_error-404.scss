@@ -1,16 +1,4 @@
 
-.error404 .main .wrapper {
-  text-align: center;
-  
-  ul {
-    margin-bottom: $base*2;
-  }
-  
-  li {
-    @include font-size(21px);
-    @include line-height(32px);
-  }
-  @include bp-min-width($medium) {
-    min-height: 400px;
-  }
+.error404 .body-content .btn {
+  color: #fff;
 }
