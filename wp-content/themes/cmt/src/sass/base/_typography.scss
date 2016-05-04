@@ -8,6 +8,11 @@ $font-weight-bold:    700;
 
 $base:  24px;
 
+$title-xlg: 46px;
+$title-lg: 32px;
+$title-md: 24px;
+$title-sm: 18px;
+
 /*
 h1: 46px
 h2: 32px
@@ -63,7 +68,7 @@ blockquote {
 .body-content ul,
 .body-content ol {
   @include font-size(16px);
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   font-family: $font-serif;
 
   @include bp-max-width($medium) {
@@ -93,13 +98,14 @@ blockquote {
 }
 
 .body-content h2 {
-  @include font-size(24px);
+  @include font-size(19px);
   margin-bottom: 6px;
   color: $blue;
   font-weight: $font-weight-bold;
 
   @include bp-min-width($medium) {
-    @include font-size(32px);
+    @include font-size(24px);
+    @include line-height(28px);
   }
 }
 
@@ -109,15 +115,6 @@ blockquote {
   margin-bottom: 4px;
   color: $blue;
   font-weight: $font-weight-bold;
-
-  @include bp-max-width($medium) {
-    @include line-height(22px);
-  }
-
-
-  @include bp-min-width($medium) {
-    @include font-size(24px);
-  }
 }
 
 .body-content h3 {

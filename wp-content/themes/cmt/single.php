@@ -37,7 +37,7 @@
             </a>
           </div>
     			<div class="post--content">
-            <p class="post--meta">By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?> | <?php the_date('M j, Y'); ?></a>
+            <p class="post--meta">By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a> | <?php the_date('M j, Y'); ?></p>
       			<div class="body-content">
       				<?php the_content(); ?>
       			</div>

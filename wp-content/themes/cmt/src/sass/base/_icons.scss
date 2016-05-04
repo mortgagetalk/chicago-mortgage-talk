@@ -19,3 +19,24 @@ svg:not(:root) {
   height: 18px;
   fill: #fff;
 }
+
+.icon-phone {
+  width: 18px;
+  height: 18px;
+  fill: $blue;
+}
+
+.icon-social-circle {
+  width: 20px;
+  height: 20px;
+  fill: $blue;
+
+  @include bp-min-width($medium) {
+    width: 30px;
+    height: 30px;
+  }
+
+  &:hover {
+    fill: $lt-blue;
+  }
+}

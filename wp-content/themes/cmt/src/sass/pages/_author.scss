@@ -1,0 +1,103 @@
+
+.author .sidebar-right {
+  @include bp-min-width($medium) {
+    top: 48px;
+  }
+}
+
+.author-info {
+  @include cf;
+  position: relative;
+  min-height: $base*14;
+  margin-bottom: $base;
+
+  @include bp-min-width($medium) {
+    margin-bottom: $base*3;
+  }
+}
+
+.author-info--header,
+.author-bio {
+  @include bp-min-width($medium) {
+    padding-left: 310px;
+  }
+}
+
+.author-info--header {
+  @include bp-max-width($medium) {
+    padding-left: 120px;
+  }
+
+  @include bp-min-width($medium) {
+    margin-bottom: 12px;
+  }
+}
+
+.author-name,
+.author-position {
+  @include bp-min-width($medium) {
+    display: inline-block;
+  }
+}
+
+.author-name {
+  @include font-size($title-md);
+  margin-right: 12px;
+  color: $blue;
+  font-weight: $font-weight-bold;
+
+  @include bp-min-width($medium) {
+    @include font-size($title-lg);
+  }
+}
+
+.author-position {
+  font-weight: $font-weight-medium;
+
+  @include bp-min-width($medium) {
+    @include font-size(18px);
+  }
+}
+
+.author-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+
+  @include bp-min-width($medium) {
+    @include col-span(3, width);
+  }
+}
+
+.author-contact {
+  @include bp-max-width($medium) {
+    margin-bottom: 12px;
+    padding-left: 120px;
+  }
+
+  @include bp-min-width($medium) {
+    @include col-span(3, width);
+    position: absolute;
+    top: 300px;
+    left: 0;
+  }
+}
+
+.author-social {
+  @include cf;
+  margin-bottom: 4px;
+
+  @include bp-min-width($medium) {
+    margin-bottom: 12px;
+  }
+}
+
+.author-social li {
+  float: left;
+  margin-right: 10px;
+}
+
+.author-phone {
+  clear: left;
+}

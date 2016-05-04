@@ -1,22 +1,21 @@
 
-
 // Site Mixins
 @mixin col-span($columnCount, $property) {
-  $gutterWidth: 40px;
+  $gutterWidth: 36px;
   $gutterCount: $columnCount - 1;
   $gutterWidthTotal: $gutterWidth * $gutterCount;
 
-  $columnWidth: 64px;
+  $columnWidth: 68px;
   $columnWidthTotal: $columnWidth * $columnCount;
 
   #{$property}: $columnWidthTotal + $gutterWidthTotal;
 }
 
 @mixin col-gutter-span($columnCount, $property) {
-  $gutterWidth: 40px;
+  $gutterWidth: 36px;
   $gutterWidthTotal: $gutterWidth * $columnCount;
 
-  $columnWidth: 64px;
+  $columnWidth: 68px;
   $columnWidthTotal: $columnWidth * $columnCount;
 
   #{$property}: $columnWidthTotal + $gutterWidthTotal;
@@ -25,7 +24,7 @@
 // Clearfix
 @mixin cf {
   &:before, &:after {
-    content: " ";
+    content: '';
     display: block;
   }
   &:after {

@@ -12,9 +12,13 @@ body {
 
 .main {
   background: #fff;
-  margin: 0 10px;
+  margin-top: 6px;
   padding: 0 20px;
   max-width: 1288px;
+
+  @include bp-min-width($xsmall) {
+    margin: 12px 10px 0;
+  }
 
   @include bp-min-width($large) {
     padding: 0 40px;

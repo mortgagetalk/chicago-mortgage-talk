@@ -32,8 +32,6 @@
     </form>
   </div>
 
-  <?php // the_widget( 'WP_Widget_Recent_Posts', 'title=Recent Articles', 'before_title=<h3 class="widget--title">&after_title=</h3>' ); ?>
-
   <div class="widget widget-mortgage-101">
     <h4 class="widget--title">Mortgage 101</h4>
     <div class="widget--content">
@@ -49,6 +47,8 @@
     <?php endforeach; ?>
     </ul>
   </div>
+
+  <?php // the_widget( 'WP_Widget_Recent_Posts', 'title=Recent Articles', 'before_title=<h3 class="widget--title">&after_title=</h3>' ); ?>
 
 </aside>
 

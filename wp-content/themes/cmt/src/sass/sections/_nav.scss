@@ -96,19 +96,18 @@
   display: block;
   width: 0;
   height: 2px;
-  background: $blue;
+  background: $lt-blue;
 }
 
 .main-nav li a:hover:after {
   @include bp-min-width($large) {
     width: 100%;
-    background: $lt-blue;
   }
 }
 
 .main-nav .current-menu-item a {
   @include bp-min-width($medium) {
-    box-shadow: inset 0 -4px 0 $lt-blue;
+    box-shadow: inset 0 -2px 0 $lt-blue;
     color: $dk-grey;
   }
 }
