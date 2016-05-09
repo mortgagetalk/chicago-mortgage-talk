@@ -54,12 +54,6 @@ em {
   font-style: italic;
 }
 
-blockquote {
-  margin-bottom: 2em;
-  padding-left: 30px;
-  border-left: 6px solid $lt-blue;
-}
-
 .label {
   font-weight: $font-weight-bold;
 }
@@ -125,3 +119,25 @@ blockquote {
 .body-content h3 {
   margin-bottom: 4px;
 }
+
+blockquote {
+  margin-bottom: $base;
+  padding: 0 12px 6px 12px;
+  border-left: 6px solid $lt-blue;
+
+  @include bp-min-width($medium) {
+    padding: 0 24px 6px 24px;
+  }
+}
+
+.body-content blockquote p {
+  @include font-size(19px);
+  font-family: $font-sans;
+  font-style: italic;
+
+  @include bp-min-width($medium) {
+    @include font-size(32px);
+    @include line-height(36px);
+  }
+}
+
