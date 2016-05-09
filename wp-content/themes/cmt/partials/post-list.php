@@ -13,7 +13,5 @@
   </article>
 <?php endwhile; endif; ?>
 </div>
-<div class="load-more-posts">
-  <button class="btn--load-more">More Articles</button>
-</div>
+
 <?php post_navigation(); ?>

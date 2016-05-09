@@ -106,41 +106,41 @@
 
 	// Navigation
 	function post_navigation() {
-	  $prev_page = get_previous_posts_link('Previous Page');
-	  $next_page = get_next_posts_link('Next Page');
+	  $prev_page = get_previous_posts_link('<svg class="post-list-nav--icon icon-prev"><use xlink:href="#icon-prev"></use></svg> Previous Articles');
+	  $next_page = get_next_posts_link('More Articles <svg class="post-list-nav--icon icon-next"><use xlink:href="#icon-next"></use></svg>');
 	  if($prev_page || $next_page) {
-  		echo '<div class="posts-nav">';
+  		echo '<div class="post-list-nav">';
   	  if ($prev_page) {
-    	  echo $prev_page;
+    	  echo  '<div class="post-list-nav--item">' . $prev_page . '</div>';
   	  } else {
-    	  echo '<span class="nav-item">Previous Page</span>';
+        echo '<div class="post-list-nav--item"><svg class="post-list-nav--icon icon-prev"><use xlink:href="#icon-prev"></use></svg> Previous Articles</div>';
   	  }
   	  if ($next_page) {
-    	  echo $next_page;
+        echo  '<div class="post-list-nav--item">' . $next_page . '</div>';
   	  } else {
-    	  echo '<span class="nav-item">Next Page</span>';
+        echo '<div class="post-list-nav--item">More Articles <svg class="post-list-nav--icon icon-next"><use xlink:href="#icon-next"></use></svg></div>';
   	  }
   		echo '</div>';
 		}
 	}
 
   // Single Navigation
-	function single_post_navigation($input) {
-	  $prev_post = get_previous_post();
-	  $next_post = get_next_post();
-		echo '<div class="posts-nav">';
-	  if ($prev_post) {
-  	  echo '<a href="'.get_permalink( $prev_post->ID ).'">Previous Article</a>';
-	  } else {
-  	  echo '<span class="nav-item">Previous Article</span>';
-	  }
-	  if ($next_post) {
-  	  echo '<a href="'.get_permalink( $next_post->ID ).'">Next Article</a>';
-	  } else {
-  	  echo '<span class="nav-item">Next Article</span>';
-	  }
-		echo '</div>';
-	}
+  function single_post_navigation() {
+    $prev_post = get_previous_post();
+    $next_post = get_next_post();
+    echo '<div class="post-nav">';
+    if ($prev_post) {
+      echo '<div class="post-nav--item"><a href="'. get_permalink($prev_post->ID) .'"><svg class="post-nav--icon icon-prev"><use xlink:href="#icon-prev"></use></svg> Previous Article</a></div>';
+    } else {
+      echo '<div class="post-nav--item"><svg class="post-nav--icon icon-prev"><use xlink:href="#icon-prev"></use></svg> Previous Article</div>';
+    }
+    if ($next_post) {
+      echo '<div class="post-nav--item"><a href="'. get_permalink($next_post->ID) .'">Next Article <svg class="post-nav--icon icon-next"><use xlink:href="#icon-next"></use></svg></a></div>';
+    } else {
+      echo '<div class="post-nav--item">Next Article <svg class="post-nav--icon icon-next"><use xlink:href="#icon-next"></use></svg></a></div>';
+    }
+    echo '</div>';
+  }
 
 	// Posted On
 	function posted_on() {
@@ -190,80 +190,5 @@
       'blog-image' => __('Blog Image'),
     ));
   }
-
-
-  // Custom Widgets
-  class Foo_Widget extends WP_Widget {
-
-    /**
-     * Register widget with WordPress.
-     */
-    function __construct() {
-      parent::__construct(
-        'foo_widget', // Base ID
-        __( 'Widget Title', 'text_domain' ), // Name
-        array( 'description' => __( 'A Foo Widget', 'text_domain' ), ) // Args
-      );
-    }
-
-    /**
-     * Front-end display of widget.
-     *
-     * @see WP_Widget::widget()
-     *
-     * @param array $args     Widget arguments.
-     * @param array $instance Saved values from database.
-     */
-    public function widget( $args, $instance ) {
-      echo $args['before_widget'];
-      if ( ! empty( $instance['title'] ) ) {
-        echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
-      }
-      echo __( 'Hello, World!', 'text_domain' );
-      echo $args['after_widget'];
-    }
-
-    /**
-     * Back-end widget form.
-     *
-     * @see WP_Widget::form()
-     *
-     * @param array $instance Previously saved values from database.
-     */
-    public function form( $instance ) {
-      $title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'New title', 'text_domain' );
-      ?>
-      <p>
-      <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
-      <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
-      </p>
-      <?php
-    }
-
-    /**
-     * Sanitize widget form values as they are saved.
-     *
-     * @see WP_Widget::update()
-     *
-     * @param array $new_instance Values just sent to be saved.
-     * @param array $old_instance Previously saved values from database.
-     *
-     * @return array Updated safe values to be saved.
-     */
-    public function update( $new_instance, $old_instance ) {
-      $instance = array();
-      $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-
-      return $instance;
-    }
-
-  } // class Foo_Widget
-
-  // register Foo_Widget widget
-  function register_foo_widget() {
-      register_widget( 'Foo_Widget' );
-  }
-  add_action( 'widgets_init', 'register_foo_widget' );
-
 
 ?>

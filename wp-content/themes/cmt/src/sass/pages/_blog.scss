@@ -40,16 +40,6 @@
   padding-top: 12px;
 }
 
-.post-nav {
-  @include font-size(18px);
-  padding: 18px 0;
-  text-align: center;
-
-  @include bp-min-width($large) {
-    @include font-size(21px);
-  }
-}
-
 .post--share {
   @include cf;
   float: right;
@@ -109,4 +99,43 @@
   height: 15px;
 }
 
+.post-list-nav {
+  @include cf;
+}
+
+.post-list-nav--item {
+  color: $grey;
+  font-weight: $font-weight-bold;
+}
+
+.post-list-nav--item a {
+  color: $lt-blue;
+}
+
+.post-list-nav--item:first-child {
+  float: left;
+}
+
+.post-list-nav--item:last-child {
+  float: right;
+}
+
+.post-list-nav--icon {
+  vertical-align: -1px;
+  width: 8px;
+  height: 12px;
+  fill: $grey;
+}
+
+a .post-list-nav--icon {
+  fill: $lt-blue;
+}
+
+.post-list-nav--item .icon-prev {
+  margin-right: 2px;
+}
+
+.post-list-nav--item .icon-next {
+  margin-left: 2px;
+}
 

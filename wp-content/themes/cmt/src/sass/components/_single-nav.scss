@@ -1,22 +1,47 @@
 
-.posts-nav {
+.post-nav {
   @include cf;
   border-top: 2px solid $lt-grey;
 }
 
-.posts-nav a,
-.posts-nav .nav-item {
+.post-nav--item {
   display: block;
   float: left;
   width: 50%;
   padding: $base 0;
+  color: $md-grey;
+  font-weight: $font-weight-bold;
   text-align: center;
 
   &:first-child {
-    border-right: 2px solid $lt-grey;
+    border-right: 2px solid $grey;
   }
 }
 
-.posts-nav .nav-item {
-  color: $grey;
+.post-nav--item a {
+  display: block;
+}
+
+.post-nav--icon {
+  @include global-transition(0.1s);
+  vertical-align: -1px;
+  width: 8px;
+  height: 12px;
+  fill: $md-grey;
+}
+
+a .post-nav--icon {
+  fill: $blue;
+}
+
+a:hover .post-nav--icon {
+  fill: $lt-blue;
+}
+
+.post-nav--item .icon-prev {
+  margin-right: 2px;
+}
+
+.post-nav--item .icon-next {
+  margin-left: 2px;
 }
