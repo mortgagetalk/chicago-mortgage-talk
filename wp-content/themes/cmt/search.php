@@ -29,14 +29,10 @@
 				<?php endwhile; ?>
 				</div>
 
-				<div class="load-more-posts">
-				  <button class="btn--load-more">More Articles</button>
-				</div>
-
 				<?php post_navigation(); ?>
 
 				<?php else : ?>
-					<h2 class="search--no-results"><?php _e('Nothing Found','html5reset'); ?></h2>
+					<h2 class="search--no-results">Sorry, nothing found.</h2>
 					<p><a href="/" class="btn btn__blue">Back Home</a></p>
 				<?php endif; ?>
 			</section>
