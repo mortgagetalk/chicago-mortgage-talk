@@ -135,7 +135,7 @@ $(function(){
     $('.animate').addClass('fade-in');
   });
 
-  $(".body").fitVids();
+  $(".body-content").fitVids();
 
   mobileNav();
   searchToggle();

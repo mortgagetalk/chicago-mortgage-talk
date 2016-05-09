@@ -33,11 +33,16 @@
 
 .post figure {
   position: relative;
-  margin-bottom: 2em;
+  margin-bottom: $base;
 }
 
 .post figcaption {
   padding-top: 12px;
+  font-style: italic;
+}
+
+.post figure p {
+  margin-bottom: 0;
 }
 
 .post--share {
