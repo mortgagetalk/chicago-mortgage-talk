@@ -16,7 +16,7 @@
 
   @include bp-min-width($large) {
     @include font-size(18px);
-    margin-bottom: 6px;
+    margin-bottom: 12px;
   }
 }
 

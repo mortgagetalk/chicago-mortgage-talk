@@ -100,7 +100,7 @@ em {
 
   @include bp-min-width($medium) {
     @include font-size(24px);
-    @include line-height(28px);
+    @include line-height(30px);
   }
 }
 

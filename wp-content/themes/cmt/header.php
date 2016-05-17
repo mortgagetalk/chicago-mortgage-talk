@@ -11,6 +11,18 @@
   	<meta name="description" content="<?php bloginfo('description'); ?>" />
   	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/dist/images/favicon.png">
   	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
+    <?php
+      $hero_thumb_2x_array = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-hero');
+      $hero_thumb_2x = $hero_thumb_2x_array[0];
+      $hero_thumb_array = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'grid-thumb');
+      $hero_thumb = $hero_thumb_array[0];
+    ?>
+    <style>
+      .hero--image { background-image: url(<?php echo $hero_thumb ?>); }
+      @media (min-width: 800px) {
+        .hero--image { background-image: url(<?php echo $hero_thumb_2x ?>); }
+      }
+    </style>
     <script src="https://use.typekit.net/ksi3xzc.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <?php wp_head(); ?>
