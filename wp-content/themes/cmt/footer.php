@@ -84,23 +84,8 @@
               </ul>
             </div>
 
-            <div class="col col-1-4__lg col-1-2__md footer-contact">
-              <h3 class="footer--title">Contact Us</h3>
-              <p>United Home Loans<br>
-              Chicago, IL<br>
-              hello@uhloans.com<br>
-              866-607-1780 | <a href="mailto:">Email Us</a></p>
-            </div>
+            <?php dynamic_sidebar( 'Footer Blocks' ); ?>
 
-            <div class="col col-1-4__lg col-1-2__md footer-quick-links">
-              <h3 class="footer--title">Quicklinks</h3>
-              <ul>
-                <li><a href="">Current Mortgage Rates</a></li>
-                <li><a href="">FHA Refinance</a></li>
-                <li><a href="">USDA Home Loans</a></li>
-                <li><a href="">HARP</a></li>
-              </ul>
-            </div>
           </div>
 
         </div>

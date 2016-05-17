@@ -45,6 +45,11 @@
 
     $args = array(
       'name' => __( 'Footer Blocks', 'text_domain' ),
+      'class'         => '',
+      'before_widget' => '<div class="col col-1-4__lg col-1-2__md %2$s">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h3 class="footer--title">',
+      'after_title'   => '</h3>'
     );
     register_sidebar( $args );
 
