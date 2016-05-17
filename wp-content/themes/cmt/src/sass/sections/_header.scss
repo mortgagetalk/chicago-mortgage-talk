@@ -51,6 +51,7 @@
 
 .header-search {
   position: relative;
+  z-index: 10;
 
   @include bp-max-width($small) {
     display: none;

@@ -29,13 +29,6 @@
             var postURL = 'https://visitor2.constantcontact.com/api/signup';
           </script>
           <script type='text/javascript' src='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/js/signup-form.js'></script>
-
-
-
-          <!-- <form class="newsletter-section--form newsletter-form">
-            <input type="email" placeholder="Email" class="newsletter-form--input">
-            <input type="submit" value="Sign Up" class="btn btn__dk-red newsletter-form--btn">
-          </form> -->
         </div>
       </section>
 

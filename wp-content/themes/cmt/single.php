@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <section class="hero">
+  <div class="hero--image" style="background-image: url(<?php the_post_thumbnail_url( 'post-hero' ); ?>);"></div>
   <div class="hero-wrapper">
     <p class="hero--post-category"><?php the_category( ' / ' ); ?></p>
     <h2 class="hero--title"><?php the_title(); ?></h2>
