@@ -9,7 +9,7 @@
 
           <section class="page-content">
             <h1 class="page-title"><?php the_title(); ?></h1>
-            <div class="body">
+            <div class="body-content">
           		<?php the_content(); ?>
             </div>
           </section>
