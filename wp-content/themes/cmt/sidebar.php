@@ -11,7 +11,7 @@
     <div class="widget--content widget-author--content">
       <p>Jeff Dulla is a Senior Mortgage Banker with United Home Loans. In his five and half years there, Jeff has accumulated a client portfolio of approximately 500 closed loans totaling 131,000,000 in volume.</p>
       <p class="widget-author--contact-link">
-        <a href="">
+        <a href="mailto:jdulla@uhloans.com">
           <svg class="icon-email widget-author--email-icon">
             <use xlink:href="#icon-email"></use>
           </svg>

@@ -47,30 +47,23 @@
               <h3 class="footer--title">Follow Us</h3>
               <ul class="footer-social--list">
                 <li class="footer-social--item">
-                  <a href="" target="_blank">
+                  <a href="https://www.facebook.com/jeff.dulla" target="_blank">
                     <svg class="footer-social--icon icon-circle-facebook">
                       <use xlink:href="#icon-circle-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="footer-social--item">
-                  <a href="" target="_blank">
+                  <a href="https://twitter.com/jdulla" target="_blank">
                     <svg class="footer-social--icon icon-circle-twitter">
                       <use xlink:href="#icon-circle-twitter"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="footer-social--item">
-                  <a href="" target="_blank">
+                  <a href="https://www.linkedin.com/in/jeff-dulla-6a535b9" target="_blank">
                     <svg class="footer-social--icon icon-circle-linkedin">
                       <use xlink:href="#icon-circle-linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="footer-social--item">
-                  <a href="" target="_blank">
-                    <svg class="footer-social--icon icon-circle-google-plus">
-                      <use xlink:href="#icon-circle-google-plus"></use>
                     </svg>
                   </a>
                 </li>
