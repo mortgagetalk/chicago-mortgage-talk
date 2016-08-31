@@ -2,6 +2,17 @@
 .hero {
   position: relative;
   background-color: #000;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.category-mortgage-101 .hero {
+  background-image: $hero-02;
+}
+
+.category-mortgage-rates .hero {
+  background-image: $hero-03;
 }
 
 .hero--image {
@@ -71,7 +82,7 @@
 }
 
 .hero--description {
-  @include col-span(8, max-width);
+  @include col-span(6, max-width);
 }
 
 .hero--description p {

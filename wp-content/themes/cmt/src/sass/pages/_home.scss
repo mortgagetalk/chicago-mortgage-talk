@@ -1,7 +1,9 @@
 
 .home-hero {
   text-align: center;
+  background-image: $hero-01;
 }
+
 
 .home-hero--title {
   @include bp-min-width($medium) {
