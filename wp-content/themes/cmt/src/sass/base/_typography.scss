@@ -150,8 +150,8 @@ blockquote {
   font-style: italic;
 
   @include bp-min-width($medium) {
-    @include font-size(32px);
-    @include line-height(36px);
+    @include font-size(27px);
+    line-height: 1.333;
   }
 }
 
