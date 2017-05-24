@@ -1,5 +1,5 @@
 <!doctype html>
-  <html class="no-js" <?php language_attributes(); ?>>
+<html class="no-js" <?php language_attributes(); ?>>
   <head>
   	<meta charset="<?php bloginfo('charset'); ?>">
   	<!--[if IE]>
@@ -23,8 +23,16 @@
         .hero--image { background-image: url(<?php echo $hero_thumb_2x ?>); }
       }
     </style>
-    <script src="https://use.typekit.net/ksi3xzc.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'ksi3xzc',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
     <?php wp_head(); ?>
   	<!--[if lt IE 9]>
     <script src="<?php echo get_template_directory_uri(); ?>/src/js/respond.min.js"></script>
@@ -68,4 +76,3 @@
           </form>
         </div>
   		</header>
-

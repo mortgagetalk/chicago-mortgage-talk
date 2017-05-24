@@ -52,7 +52,7 @@ body {
   padding: $base 0;
 
   @include bp-min-width($large) {
-    padding: 36px 0;
+    padding: 36px 0 $base*3;
   }
 }
 
@@ -60,14 +60,15 @@ body {
   position: relative;
 
   @include bp-min-width($large) {
+    display: flex;
+    justify-content: space-between;
     min-height: $base*34;
   }
 }
 
 .page-content {
   @include bp-min-width($large) {
-    width: 100%;
-    padding-right: 310px;
+    width: calc(100% - 310px);
   }
 }
 
@@ -77,9 +78,6 @@ body {
   }
 
   @include bp-min-width($large) {
-    position: absolute;
-    top: 0;
-    right: 0;
     width: 276px;
   }
 }

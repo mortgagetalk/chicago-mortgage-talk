@@ -13,7 +13,7 @@
 
     <div class="content-wrapper">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-  		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+  		<article id="post-<?php the_ID(); ?>" class="page-content">
         <div class="post--share">
           <a href="http://www.facebook.com/sharer/sharer.php?u=http://chicagomortgagetalk.com/<?php echo get_permalink(); ?>" target="_blank" class="post--share-link">
             <svg class="post--share-icon icon-facebook">

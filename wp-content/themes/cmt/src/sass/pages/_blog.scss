@@ -3,11 +3,6 @@
   @include bp-min-width($small) {
     padding-left: 102px;
   }
-
-  @include bp-min-width($large) {
-    width: 100%;
-    padding-right: 310px;
-  }
 }
 
 .post--meta {
@@ -143,4 +138,3 @@ a .post-list-nav--icon {
 .post-list-nav--item .icon-next {
   margin-left: 2px;
 }
-
