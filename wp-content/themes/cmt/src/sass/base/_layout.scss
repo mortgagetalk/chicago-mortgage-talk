@@ -13,7 +13,6 @@ body {
 .main {
   display: block;
   background: #fff;
-  margin-top: 6px;
   padding: 0 20px;
   max-width: 1288px;
 
@@ -80,6 +79,26 @@ body {
   @include bp-min-width($large) {
     width: 276px;
   }
+}
+
+.align-center {
+  text-align: center;
+}
+
+.aligncenter {
+  margin: 0 auto;
+}
+
+.alignright {
+  float: right;
+  max-width: 50%;
+  margin: 0 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  max-width: 50%;
+  margin: 0 20px 20px 0;
 }
 
 .no-scroll {
