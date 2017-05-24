@@ -154,3 +154,7 @@ blockquote {
     @include line-height(36px);
   }
 }
+
+.body-content figure {
+  margin-bottom: $base;
+}
