@@ -8,9 +8,7 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<title><?php wp_title( '|', true, 'right' ); ?></title>
   	<meta name="title" content="<?php wp_title( '|', true, 'right' ); ?>">
-  	<meta name="description" content="<?php bloginfo('description'); ?>" />
   	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/dist/images/favicon.png">
-  	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
     <?php
       $hero_thumb_2x_array = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-hero');
       $hero_thumb_2x = $hero_thumb_2x_array[0];
@@ -34,9 +32,6 @@
       })(document);
     </script>
     <?php wp_head(); ?>
-  	<!--[if lt IE 9]>
-    <script src="<?php echo get_template_directory_uri(); ?>/src/js/respond.min.js"></script>
-    <![endif]-->
   </head>
   <body <?php body_class(); ?>>
     <?php get_template_part( 'partials/svg' ); ?>

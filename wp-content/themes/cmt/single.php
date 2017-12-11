@@ -15,7 +15,7 @@
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
   		<article id="post-<?php the_ID(); ?>" class="page-content">
         <div class="post--share">
-          <a href="http://www.facebook.com/sharer/sharer.php?u=http://chicagomortgagetalk.com/<?php echo get_permalink(); ?>" target="_blank" class="post--share-link">
+          <a href="http://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(); ?>" target="_blank" class="post--share-link">
             <svg class="post--share-icon icon-facebook">
               <use xlink:href="#icon-facebook"></use>
             </svg>
@@ -25,12 +25,12 @@
               <use xlink:href="#icon-twitter"></use>
             </svg>
           </a>
-          <a href="http://twitter.com/share?text=Chicago Mortgage Talk - <?php the_title(); ?>" class="post--share-link">
+          <a href="https://www.linkedin.com/cws/share?url=<?php echo get_permalink(); ?>" class="post--share-link">
             <svg class="post--share-icon icon-linkedin">
               <use xlink:href="#icon-linkedin"></use>
             </svg>
           </a>
-          <a href="mailto:?subject=<?php the_title(); ?>&body=http://chicagomortgagetalk.com/<? echo get_permalink(); ?>" class="post--share-link">
+          <a href="mailto:?subject=<?php the_title(); ?>&body=<? echo get_permalink(); ?>" class="post--share-link">
             <svg class="post--share-icon icon-email">
               <use xlink:href="#icon-email"></use>
             </svg>

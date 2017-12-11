@@ -3,7 +3,7 @@
   <div class="widget widget-author">
     <div class="widget-author--header">
       <div class="widget-author--headshot">
-        <img src="<?php bloginfo('template_directory'); ?>/dist/images/author-jeff-dulla.jpg" alt="Jeff Dulla">
+        <img src="<?php bloginfo('template_directory'); ?>/dist/images/author-jeff-dulla-opt.jpg" alt="Jeff Dulla">
       </div>
       <h4 class="widget-author--name">Jeff Dulla</h4>
       <p class="widget-author--job-title">VP of United Home Loans</p>
